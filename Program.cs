@@ -4,9 +4,9 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var connectionString = builder.Configuration.GetConnectionString("DefaultEF_TransactionConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultEF_TransactionConnection");
 
-//builder.Services.AddDbContext<EF_TransactionDbContext>(options => options.UseSqlServer(connectionString));    
+builder.Services.AddDbContext<EF_TransactionDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
